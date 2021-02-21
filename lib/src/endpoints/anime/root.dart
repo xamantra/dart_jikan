@@ -6,6 +6,7 @@ import '../../utils/index.dart';
 
 /// A single anime object with all its details.
 ///
+/// **Endpoint Path:** `/anime/{id}`
 /// ### Example
 /// ```dart
 /// var result = await jikanGetAnime(id: 30);
@@ -17,8 +18,6 @@ import '../../utils/index.dart';
 /// }
 /// ```
 /// If there's an error, the `.response` object will be null.
-///
-/// **Endpoint Path:** `/anime/{id}`
 Future<JikanResult<JikanAnimeDetails>> jikanGetAnime({
   @required int id,
   Map<String, String> headers,
