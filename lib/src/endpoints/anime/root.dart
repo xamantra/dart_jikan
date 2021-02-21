@@ -1,8 +1,8 @@
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
-import '../models/index.dart';
-import '../utils/index.dart';
+import '../../models/index.dart';
+import '../../utils/index.dart';
 
 /// A single anime object with all its details.
 ///
@@ -12,15 +12,18 @@ import '../utils/index.dart';
 /// var onepiece = result.response; // One Piece details
 ///
 /// // you can also check for an error before accessing the anime details.
-/// if (result.error != null) {
-///   print(error.message);
+/// if (result.hasError) {
+///   print(result.error.message);
 /// }
 /// ```
 /// If there's an error, the `.response` object will be null.
 ///
 /// **Endpoint Path:** `/anime/{id}`
-Future<JikanResult<JikanAnimeDetails>> jikanGetAnime({@required int id}) async {
-  var response = await http.get('$jikan_base/anime/$id');
+Future<JikanResult<JikanAnimeDetails>> jikanGetAnime({
+  @required int id,
+  Map<String, String> headers,
+}) async {
+  var response = await http.get('$jikan_base/anime/$id', headers: headers);
   if (response.statusCode != 200) {
     var error = JikanError.fromRawJson(response.body);
     var result = JikanResult(response: null, error: error, statusCode: response.statusCode);

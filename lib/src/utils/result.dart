@@ -12,4 +12,7 @@ class JikanResult<TResponse> {
   final TResponse response;
   final JikanError error;
   final int statusCode;
+
+  bool get hasError => error != null;
+  bool get hasData => response != null;
 }
