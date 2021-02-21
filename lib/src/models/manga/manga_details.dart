@@ -124,7 +124,7 @@ class JikanMangaDetails {
         serializations: serializations ?? this.serializations,
       );
 
-  factory JikanMangaDetails.fromRawJson(String str) => JikanMangaDetails.fromJson(json.decode(str));
+  static JikanMangaDetails fromRawJson(String str) => JikanMangaDetails.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

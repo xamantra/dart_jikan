@@ -1,7 +1,5 @@
-import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
-import '../../models/index.dart';
 import '../../models/manga/index.dart';
 import '../../utils/index.dart';
 
@@ -23,13 +21,10 @@ Future<JikanResult<JikanMangaDetails>> jikanGetManga({
   @required int id,
   Map<String, String> headers,
 }) async {
-  var response = await http.get('$jikan_base/manga/$id', headers: headers);
-  if (response.statusCode != 200) {
-    var error = JikanError.fromRawJson(response.body);
-    var result = JikanResult(response: null, error: error, statusCode: response.statusCode);
-    return result;
-  }
-  var data = JikanMangaDetails.fromRawJson(response.body);
-  var result = JikanResult(response: data, error: null, statusCode: response.statusCode);
+  var result = await request(
+    'manga/$id',
+    JikanMangaDetails.fromRawJson,
+    headers,
+  );
   return result;
 }

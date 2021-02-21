@@ -158,7 +158,7 @@ class JikanAnimeDetails {
         endingThemes: endingThemes ?? this.endingThemes,
       );
 
-  factory JikanAnimeDetails.fromRawJson(String str) => JikanAnimeDetails.fromJson(json.decode(str));
+  static JikanAnimeDetails fromRawJson(String str) => JikanAnimeDetails.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

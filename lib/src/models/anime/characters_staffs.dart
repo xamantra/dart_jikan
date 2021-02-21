@@ -32,7 +32,7 @@ class JikanAnimeCharacterStaff {
         staff: staff ?? this.staff,
       );
 
-  factory JikanAnimeCharacterStaff.fromRawJson(String str) => JikanAnimeCharacterStaff.fromJson(json.decode(str));
+  static JikanAnimeCharacterStaff fromRawJson(String str) => JikanAnimeCharacterStaff.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
