@@ -70,7 +70,7 @@ class JikanAnimeDetails {
   final int members;
   final int favorites;
   final String synopsis;
-  final dynamic background;
+  final String background;
   final String premiered;
   final String broadcast;
   final Related related;
@@ -108,7 +108,7 @@ class JikanAnimeDetails {
     @required int members,
     @required int favorites,
     @required String synopsis,
-    @required dynamic background,
+    @required String background,
     @required String premiered,
     @required String broadcast,
     @required Related related,
@@ -189,7 +189,7 @@ class JikanAnimeDetails {
         members: json["members"] == null ? null : json["members"],
         favorites: json["favorites"] == null ? null : json["favorites"],
         synopsis: json["synopsis"] == null ? null : json["synopsis"],
-        background: json["background"],
+        background: json["background"] == null ? null : json["background"],
         premiered: json["premiered"] == null ? null : json["premiered"],
         broadcast: json["broadcast"] == null ? null : json["broadcast"],
         related: json["related"] == null ? null : Related.fromJson(json["related"]),
@@ -228,7 +228,7 @@ class JikanAnimeDetails {
         "members": members == null ? null : members,
         "favorites": favorites == null ? null : favorites,
         "synopsis": synopsis == null ? null : synopsis,
-        "background": background,
+        "background": background == null ? null : background,
         "premiered": premiered == null ? null : premiered,
         "broadcast": broadcast == null ? null : broadcast,
         "related": related == null ? null : related.toJson(),
