@@ -3,8 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('should return one piece', () async {
-    var result = await jikanGetAnime(id: 30);
-    expect(result.response.malId, 30);
+    var result = await jikanGetAnime(id: 21);
+    expect(result.response.malId, 21);
     expect(result.hasData, true);
   });
 

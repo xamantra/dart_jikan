@@ -10,7 +10,7 @@ import '../../utils/index.dart';
 /// **Endpoint Path:** `/anime/{id}`
 /// ### Example
 /// ```dart
-/// var result = await jikanGetAnime(id: 30);
+/// var result = await jikanGetAnime(id: 21);
 /// var onepiece = result.response; // One Piece details
 ///
 /// // you can also check for an error before accessing the anime details.
