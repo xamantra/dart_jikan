@@ -6,8 +6,9 @@ import 'index.dart';
 Future<JikanResult<T>> request<T>(
   String path,
   T Function(String) transformer,
-  Map<String, String> headers,
-) async {
+  Map<String, String> headers, {
+  bool returnPlain = false,
+}) async {
   var response = await http.get('$jikan_base/$path', headers: headers);
   if (response.statusCode != 200) {
     var error = JikanError.fromRawJson(response.body);

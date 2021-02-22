@@ -1,15 +1,16 @@
 import 'package:meta/meta.dart';
 
-import '../../models/manga/index.dart';
+import '../../models/anime/index.dart';
 import '../../utils/index.dart';
 
-Future<JikanResult<JikanMangaDetails>> jikanGetManga({
+Future<JikanResult<JikanAnimeEpisodes>> jikanGetAnimeEpisodes({
   @required int id,
+  int page = 1,
   Map<String, String> headers,
 }) async {
   var result = await request(
-    'manga/$id',
-    JikanMangaDetails.fromRawJson,
+    'anime/$id/episodes/$page',
+    JikanAnimeEpisodes.fromRawJson,
     headers,
   );
   return result;

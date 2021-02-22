@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+/// {@template entry_data_item}
 /// ### This model is used in:
 /// - producers
 /// - licensors
@@ -19,27 +20,12 @@ import 'dart:convert';
 /// - parentStory
 /// - other
 /// - character
+/// {@endtemplate}
+
+/// {@macro entry_data_item}
 class EntryDataItem {
-  /// ### This model is used in:
-  /// - producers
-  /// - licensors
-  /// - studios
-  /// - genres
-  ///
-  /// ### And also in related entries:
-  /// - adaptation
-  /// - summary
-  /// - prequel
-  /// - sequel
-  /// - alternativeSetting
-  /// - alternativeVersion
-  /// - spinOff
-  /// - sideStory
-  /// - fullStory
-  /// - parentStory
-  /// - other
-  /// - character
-  EntryDataItem({
+  /// {@macro entry_data_item}
+  const EntryDataItem({
     this.malId,
     this.type,
     this.name,

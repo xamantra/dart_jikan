@@ -1,9 +1,10 @@
-import 'package:dart_jikan/src/endpoints/anime/index.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+import '../../jikan.dart';
 
 void main() {
   test('should return one piece characters and staffs', () async {
-    var result = await jikanGetAnimeCharacterStaff(id: 21);
+    var result = await jikan.getAnimeCharacterStaff(id: 21);
     // Brook
     expect(result.response.characters.any((x) => x.malId == 5627), true);
     // Nagamine, Tatsuya (Director)
@@ -12,7 +13,7 @@ void main() {
   });
 
   test('should return an error', () async {
-    var result = await jikanGetAnimeCharacterStaff(id: 999999);
+    var result = await jikan.getAnimeCharacterStaff(id: 999999);
     expect(result.response, null);
     expect(result.hasError, true);
   });
