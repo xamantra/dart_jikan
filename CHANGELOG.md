@@ -1,3 +1,8 @@
+## 0.1.3
+
+- In development. Not usable yet.
+- Follow Jikan's rate limit in unit testing.
+
 ## 0.1.2
 
 - In development. Not usable yet.
