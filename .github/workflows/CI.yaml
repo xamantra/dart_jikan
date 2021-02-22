@@ -11,11 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # container:
-    #   image: google/dart:2.8.4
+    container:
+      image: google/dart:2.8.4
     steps:
     - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v1.4.0
     - name: Install Packages
       run: pub get
     - name: Tests
