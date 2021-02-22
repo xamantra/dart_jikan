@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: google/dart:2.8.4
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: pub get
+      - name: Run tests
+        run: pub run test_coverage
+      - name: Remove auto-generated models from coverage
+        run: flutter pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
+      - name: Check Code Coverage
+        uses: ChicagoFlutter/lcov-cop@v1.0.0
