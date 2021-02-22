@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: subosito/flutter-action@v1.4.0
     - name: Install Packages
-      run: dart packages get
+      run: dart pub get
     - name: Tests
       run: flutter test --coverage
     - name: Ignore auto-generate models in coverage
