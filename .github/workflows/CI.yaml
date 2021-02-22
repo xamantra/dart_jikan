@@ -17,10 +17,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: subosito/flutter-action@v1.4.0
     - name: Install Packages
-      run: dart pub get
+      run: pub get
     - name: Tests
-      run: flutter test --coverage
+      run: pub run test_coverage
     - name: Ignore auto-generate models in coverage
-      run: dart pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
+      run: pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
     - name: Code Coverage -> Check
       uses: ChicagoFlutter/lcov-cop@v1.0.0
