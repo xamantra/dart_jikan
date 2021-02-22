@@ -28,14 +28,17 @@ class ReleaseDate {
         string: string ?? this.string,
       );
 
-  factory ReleaseDate.fromRawJson(String str) => ReleaseDate.fromJson(json.decode(str));
+  factory ReleaseDate.fromRawJson(String str) =>
+      ReleaseDate.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory ReleaseDate.fromJson(Map<String, dynamic> json) => ReleaseDate(
         from: json["from"] == null ? null : DateTime.parse(json["from"]),
         to: json["to"] == null ? null : DateTime.parse(json["to"]),
-        prop: json["prop"] == null ? null : ReleasePropDate.fromJson(json["prop"]),
+        prop: json["prop"] == null
+            ? null
+            : ReleasePropDate.fromJson(json["prop"]),
         string: json["string"] == null ? null : json["string"],
       );
 

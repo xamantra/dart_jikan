@@ -65,32 +65,92 @@ class Related {
   String toRawJson() => json.encode(toJson());
 
   factory Related.fromJson(Map<String, dynamic> json) => Related(
-        adaptation: json["Adaptation"] == null ? null : List<EntryDataItem>.from(json["Adaptation"].map((x) => EntryDataItem.fromJson(x))),
-        summary: json["Summary"] == null ? null : List<EntryDataItem>.from(json["Summary"].map((x) => EntryDataItem.fromJson(x))),
-        prequel: json["Prequel"] == null ? null : List<EntryDataItem>.from(json["Prequel"].map((x) => EntryDataItem.fromJson(x))),
-        sequel: json["Sequel"] == null ? null : List<EntryDataItem>.from(json["Sequel"].map((x) => EntryDataItem.fromJson(x))),
-        alternativeSetting: json["Alternative setting"] == null ? null : List<EntryDataItem>.from(json["Alternative setting"].map((x) => EntryDataItem.fromJson(x))),
-        alternativeVersion: json["Alternative version"] == null ? null : List<EntryDataItem>.from(json["Alternative version"].map((x) => EntryDataItem.fromJson(x))),
-        spinOff: json["Spin-off"] == null ? null : List<EntryDataItem>.from(json["Spin-off"].map((x) => EntryDataItem.fromJson(x))),
-        sideStory: json["Side story"] == null ? null : List<EntryDataItem>.from(json["Side story"].map((x) => EntryDataItem.fromJson(x))),
-        fullStory: json["Full story"] == null ? null : List<EntryDataItem>.from(json["Full story"].map((x) => EntryDataItem.fromJson(x))),
-        parentStory: json["Parent story"] == null ? null : List<EntryDataItem>.from(json["Parent story"].map((x) => EntryDataItem.fromJson(x))),
-        other: json["Other"] == null ? null : List<EntryDataItem>.from(json["Other"].map((x) => EntryDataItem.fromJson(x))),
-        character: json["Character"] == null ? null : List<EntryDataItem>.from(json["Character"].map((x) => EntryDataItem.fromJson(x))),
+        adaptation: json["Adaptation"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Adaptation"].map((x) => EntryDataItem.fromJson(x))),
+        summary: json["Summary"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Summary"].map((x) => EntryDataItem.fromJson(x))),
+        prequel: json["Prequel"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Prequel"].map((x) => EntryDataItem.fromJson(x))),
+        sequel: json["Sequel"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Sequel"].map((x) => EntryDataItem.fromJson(x))),
+        alternativeSetting: json["Alternative setting"] == null
+            ? null
+            : List<EntryDataItem>.from(json["Alternative setting"]
+                .map((x) => EntryDataItem.fromJson(x))),
+        alternativeVersion: json["Alternative version"] == null
+            ? null
+            : List<EntryDataItem>.from(json["Alternative version"]
+                .map((x) => EntryDataItem.fromJson(x))),
+        spinOff: json["Spin-off"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Spin-off"].map((x) => EntryDataItem.fromJson(x))),
+        sideStory: json["Side story"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Side story"].map((x) => EntryDataItem.fromJson(x))),
+        fullStory: json["Full story"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Full story"].map((x) => EntryDataItem.fromJson(x))),
+        parentStory: json["Parent story"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Parent story"].map((x) => EntryDataItem.fromJson(x))),
+        other: json["Other"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Other"].map((x) => EntryDataItem.fromJson(x))),
+        character: json["Character"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["Character"].map((x) => EntryDataItem.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
-        "Adaptation": adaptation == null ? null : List<dynamic>.from(adaptation.map((x) => x.toJson())),
-        "Summary": summary == null ? null : List<dynamic>.from(summary.map((x) => x.toJson())),
-        "Prequel": prequel == null ? null : List<dynamic>.from(prequel.map((x) => x.toJson())),
-        "Sequel": sequel == null ? null : List<dynamic>.from(sequel.map((x) => x.toJson())),
-        "Alternative setting": alternativeSetting == null ? null : List<dynamic>.from(alternativeSetting.map((x) => x.toJson())),
-        "Alternative version": alternativeVersion == null ? null : List<dynamic>.from(alternativeVersion.map((x) => x.toJson())),
-        "Spin-off": spinOff == null ? null : List<dynamic>.from(spinOff.map((x) => x.toJson())),
-        "Side story": sideStory == null ? null : List<dynamic>.from(sideStory.map((x) => x.toJson())),
-        "Full story": fullStory == null ? null : List<dynamic>.from(fullStory.map((x) => x.toJson())),
-        "Parent story": parentStory == null ? null : List<dynamic>.from(parentStory.map((x) => x.toJson())),
-        "Other": other == null ? null : List<dynamic>.from(other.map((x) => x.toJson())),
-        "Character": character == null ? null : List<dynamic>.from(character.map((x) => x.toJson())),
+        "Adaptation": adaptation == null
+            ? null
+            : List<dynamic>.from(adaptation.map((x) => x.toJson())),
+        "Summary": summary == null
+            ? null
+            : List<dynamic>.from(summary.map((x) => x.toJson())),
+        "Prequel": prequel == null
+            ? null
+            : List<dynamic>.from(prequel.map((x) => x.toJson())),
+        "Sequel": sequel == null
+            ? null
+            : List<dynamic>.from(sequel.map((x) => x.toJson())),
+        "Alternative setting": alternativeSetting == null
+            ? null
+            : List<dynamic>.from(alternativeSetting.map((x) => x.toJson())),
+        "Alternative version": alternativeVersion == null
+            ? null
+            : List<dynamic>.from(alternativeVersion.map((x) => x.toJson())),
+        "Spin-off": spinOff == null
+            ? null
+            : List<dynamic>.from(spinOff.map((x) => x.toJson())),
+        "Side story": sideStory == null
+            ? null
+            : List<dynamic>.from(sideStory.map((x) => x.toJson())),
+        "Full story": fullStory == null
+            ? null
+            : List<dynamic>.from(fullStory.map((x) => x.toJson())),
+        "Parent story": parentStory == null
+            ? null
+            : List<dynamic>.from(parentStory.map((x) => x.toJson())),
+        "Other": other == null
+            ? null
+            : List<dynamic>.from(other.map((x) => x.toJson())),
+        "Character": character == null
+            ? null
+            : List<dynamic>.from(character.map((x) => x.toJson())),
       };
 }

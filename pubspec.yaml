@@ -1,6 +1,6 @@
 name: dart_jikan
 description: Dart wrapper for Jikan MAL api. Well documented and highly tested.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/xamantra/dart_jikan
 
 environment:
@@ -9,7 +9,6 @@ environment:
 dependencies:
   http: ^0.12.2
   meta: ^1.2.4
-  pool: ^1.4.0
 
 dev_dependencies:
   flutter_test: # kinda weird here but it works!

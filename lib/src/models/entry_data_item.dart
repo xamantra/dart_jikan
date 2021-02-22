@@ -50,7 +50,8 @@ class EntryDataItem {
         url: url ?? this.url,
       );
 
-  factory EntryDataItem.fromRawJson(String str) => EntryDataItem.fromJson(json.decode(str));
+  factory EntryDataItem.fromRawJson(String str) =>
+      EntryDataItem.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

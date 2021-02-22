@@ -36,7 +36,8 @@ class Character {
         voiceActors: voiceActors ?? this.voiceActors,
       );
 
-  factory Character.fromRawJson(String str) => Character.fromJson(json.decode(str));
+  factory Character.fromRawJson(String str) =>
+      Character.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
@@ -46,7 +47,10 @@ class Character {
         imageUrl: json["image_url"] == null ? null : json["image_url"],
         name: json["name"] == null ? null : json["name"],
         role: json["role"] == null ? null : json["role"],
-        voiceActors: json["voice_actors"] == null ? null : List<Person>.from(json["voice_actors"].map((x) => Person.fromJson(x))),
+        voiceActors: json["voice_actors"] == null
+            ? null
+            : List<Person>.from(
+                json["voice_actors"].map((x) => Person.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -55,6 +59,8 @@ class Character {
         "image_url": imageUrl == null ? null : imageUrl,
         "name": name == null ? null : name,
         "role": role == null ? null : role,
-        "voice_actors": voiceActors == null ? null : List<dynamic>.from(voiceActors.map((x) => x.toJson())),
+        "voice_actors": voiceActors == null
+            ? null
+            : List<dynamic>.from(voiceActors.map((x) => x.toJson())),
       };
 }

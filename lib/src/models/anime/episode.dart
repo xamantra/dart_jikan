@@ -53,8 +53,10 @@ class Episode {
   factory Episode.fromJson(Map<String, dynamic> json) => Episode(
         episodeId: json["episode_id"] == null ? null : json["episode_id"],
         title: json["title"] == null ? null : json["title"],
-        titleJapanese: json["title_japanese"] == null ? null : json["title_japanese"],
-        titleRomanji: json["title_romanji"] == null ? null : json["title_romanji"],
+        titleJapanese:
+            json["title_japanese"] == null ? null : json["title_japanese"],
+        titleRomanji:
+            json["title_romanji"] == null ? null : json["title_romanji"],
         aired: json["aired"] == null ? null : DateTime.parse(json["aired"]),
         filler: json["filler"] == null ? null : json["filler"],
         recap: json["recap"] == null ? null : json["recap"],

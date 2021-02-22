@@ -44,7 +44,9 @@ class Person {
         url: json["url"] == null ? null : json["url"],
         imageUrl: json["image_url"] == null ? null : json["image_url"],
         language: json["language"] == null ? null : json["language"],
-        positions: json["positions"] == null ? null : List<String>.from(json["positions"].map((x) => x)),
+        positions: json["positions"] == null
+            ? null
+            : List<String>.from(json["positions"].map((x) => x)),
       );
 
   Map<String, dynamic> toJson() => {
@@ -53,6 +55,8 @@ class Person {
         "url": url == null ? null : url,
         "image_url": imageUrl == null ? null : imageUrl,
         "language": language == null ? null : language,
-        "positions": positions == null ? null : List<dynamic>.from(positions.map((x) => x)),
+        "positions": positions == null
+            ? null
+            : List<dynamic>.from(positions.map((x) => x)),
       };
 }

@@ -22,7 +22,8 @@ class JikanDate {
         year: year ?? this.year,
       );
 
-  factory JikanDate.fromRawJson(String str) => JikanDate.fromJson(json.decode(str));
+  factory JikanDate.fromRawJson(String str) =>
+      JikanDate.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

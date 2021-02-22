@@ -20,11 +20,13 @@ class ReleasePropDate {
         to: to ?? this.to,
       );
 
-  factory ReleasePropDate.fromRawJson(String str) => ReleasePropDate.fromJson(json.decode(str));
+  factory ReleasePropDate.fromRawJson(String str) =>
+      ReleasePropDate.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory ReleasePropDate.fromJson(Map<String, dynamic> json) => ReleasePropDate(
+  factory ReleasePropDate.fromJson(Map<String, dynamic> json) =>
+      ReleasePropDate(
         from: json["from"] == null ? null : JikanDate.fromJson(json["from"]),
         to: json["to"] == null ? null : JikanDate.fromJson(json["to"]),
       );

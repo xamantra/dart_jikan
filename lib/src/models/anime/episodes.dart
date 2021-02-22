@@ -32,23 +32,37 @@ class JikanAnimeEpisodes {
         episodes: episodes ?? this.episodes,
       );
 
-  static JikanAnimeEpisodes fromRawJson(String str) => JikanAnimeEpisodes.fromJson(json.decode(str));
+  static JikanAnimeEpisodes fromRawJson(String str) =>
+      JikanAnimeEpisodes.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory JikanAnimeEpisodes.fromJson(Map<String, dynamic> json) => JikanAnimeEpisodes(
+  factory JikanAnimeEpisodes.fromJson(Map<String, dynamic> json) =>
+      JikanAnimeEpisodes(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],
-        requestCached: json["request_cached"] == null ? null : json["request_cached"],
-        requestCacheExpiry: json["request_cache_expiry"] == null ? null : json["request_cache_expiry"],
-        episodesLastPage: json["episodes_last_page"] == null ? null : json["episodes_last_page"],
-        episodes: json["episodes"] == null ? null : List<Episode>.from(json["episodes"].map((x) => Episode.fromJson(x))),
+        requestCached:
+            json["request_cached"] == null ? null : json["request_cached"],
+        requestCacheExpiry: json["request_cache_expiry"] == null
+            ? null
+            : json["request_cache_expiry"],
+        episodesLastPage: json["episodes_last_page"] == null
+            ? null
+            : json["episodes_last_page"],
+        episodes: json["episodes"] == null
+            ? null
+            : List<Episode>.from(
+                json["episodes"].map((x) => Episode.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "request_hash": requestHash == null ? null : requestHash,
         "request_cached": requestCached == null ? null : requestCached,
-        "request_cache_expiry": requestCacheExpiry == null ? null : requestCacheExpiry,
-        "episodes_last_page": episodesLastPage == null ? null : episodesLastPage,
-        "episodes": episodes == null ? null : List<dynamic>.from(episodes.map((x) => x.toJson())),
+        "request_cache_expiry":
+            requestCacheExpiry == null ? null : requestCacheExpiry,
+        "episodes_last_page":
+            episodesLastPage == null ? null : episodesLastPage,
+        "episodes": episodes == null
+            ? null
+            : List<dynamic>.from(episodes.map((x) => x.toJson())),
       };
 }

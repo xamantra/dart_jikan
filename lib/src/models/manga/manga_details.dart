@@ -124,27 +124,38 @@ class JikanMangaDetails {
         serializations: serializations ?? this.serializations,
       );
 
-  static JikanMangaDetails fromRawJson(String str) => JikanMangaDetails.fromJson(json.decode(str));
+  static JikanMangaDetails fromRawJson(String str) =>
+      JikanMangaDetails.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory JikanMangaDetails.fromJson(Map<String, dynamic> json) => JikanMangaDetails(
+  factory JikanMangaDetails.fromJson(Map<String, dynamic> json) =>
+      JikanMangaDetails(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],
-        requestCached: json["request_cached"] == null ? null : json["request_cached"],
-        requestCacheExpiry: json["request_cache_expiry"] == null ? null : json["request_cache_expiry"],
+        requestCached:
+            json["request_cached"] == null ? null : json["request_cached"],
+        requestCacheExpiry: json["request_cache_expiry"] == null
+            ? null
+            : json["request_cache_expiry"],
         malId: json["mal_id"] == null ? null : json["mal_id"],
         url: json["url"] == null ? null : json["url"],
         title: json["title"] == null ? null : json["title"],
-        titleEnglish: json["title_english"] == null ? null : json["title_english"],
-        titleSynonyms: json["title_synonyms"] == null ? null : List<String>.from(json["title_synonyms"].map((x) => x)),
-        titleJapanese: json["title_japanese"] == null ? null : json["title_japanese"],
+        titleEnglish:
+            json["title_english"] == null ? null : json["title_english"],
+        titleSynonyms: json["title_synonyms"] == null
+            ? null
+            : List<String>.from(json["title_synonyms"].map((x) => x)),
+        titleJapanese:
+            json["title_japanese"] == null ? null : json["title_japanese"],
         status: json["status"] == null ? null : json["status"],
         imageUrl: json["image_url"] == null ? null : json["image_url"],
         type: json["type"] == null ? null : json["type"],
         volumes: json["volumes"] == null ? null : json["volumes"],
         chapters: json["chapters"] == null ? null : json["chapters"],
         publishing: json["publishing"] == null ? null : json["publishing"],
-        published: json["published"] == null ? null : ReleaseDate.fromJson(json["published"]),
+        published: json["published"] == null
+            ? null
+            : ReleaseDate.fromJson(json["published"]),
         rank: json["rank"] == null ? null : json["rank"],
         score: json["score"] == null ? null : json["score"].toDouble(),
         scoredBy: json["scored_by"] == null ? null : json["scored_by"],
@@ -153,21 +164,34 @@ class JikanMangaDetails {
         favorites: json["favorites"] == null ? null : json["favorites"],
         synopsis: json["synopsis"] == null ? null : json["synopsis"],
         background: json["background"] == null ? null : json["background"],
-        related: json["related"] == null ? null : Related.fromJson(json["related"]),
-        genres: json["genres"] == null ? null : List<EntryDataItem>.from(json["genres"].map((x) => EntryDataItem.fromJson(x))),
-        authors: json["authors"] == null ? null : List<EntryDataItem>.from(json["authors"].map((x) => EntryDataItem.fromJson(x))),
-        serializations: json["serializations"] == null ? null : List<EntryDataItem>.from(json["serializations"].map((x) => EntryDataItem.fromJson(x))),
+        related:
+            json["related"] == null ? null : Related.fromJson(json["related"]),
+        genres: json["genres"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["genres"].map((x) => EntryDataItem.fromJson(x))),
+        authors: json["authors"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["authors"].map((x) => EntryDataItem.fromJson(x))),
+        serializations: json["serializations"] == null
+            ? null
+            : List<EntryDataItem>.from(
+                json["serializations"].map((x) => EntryDataItem.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "request_hash": requestHash == null ? null : requestHash,
         "request_cached": requestCached == null ? null : requestCached,
-        "request_cache_expiry": requestCacheExpiry == null ? null : requestCacheExpiry,
+        "request_cache_expiry":
+            requestCacheExpiry == null ? null : requestCacheExpiry,
         "mal_id": malId == null ? null : malId,
         "url": url == null ? null : url,
         "title": title == null ? null : title,
         "title_english": titleEnglish == null ? null : titleEnglish,
-        "title_synonyms": titleSynonyms == null ? null : List<dynamic>.from(titleSynonyms.map((x) => x)),
+        "title_synonyms": titleSynonyms == null
+            ? null
+            : List<dynamic>.from(titleSynonyms.map((x) => x)),
         "title_japanese": titleJapanese == null ? null : titleJapanese,
         "status": status == null ? null : status,
         "image_url": imageUrl == null ? null : imageUrl,
@@ -185,8 +209,14 @@ class JikanMangaDetails {
         "synopsis": synopsis == null ? null : synopsis,
         "background": background == null ? null : background,
         "related": related == null ? null : related.toJson(),
-        "genres": genres == null ? null : List<dynamic>.from(genres.map((x) => x.toJson())),
-        "authors": authors == null ? null : List<dynamic>.from(authors.map((x) => x.toJson())),
-        "serializations": serializations == null ? null : List<dynamic>.from(serializations.map((x) => x.toJson())),
+        "genres": genres == null
+            ? null
+            : List<dynamic>.from(genres.map((x) => x.toJson())),
+        "authors": authors == null
+            ? null
+            : List<dynamic>.from(authors.map((x) => x.toJson())),
+        "serializations": serializations == null
+            ? null
+            : List<dynamic>.from(serializations.map((x) => x.toJson())),
       };
 }

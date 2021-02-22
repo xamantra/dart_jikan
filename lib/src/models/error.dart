@@ -26,7 +26,8 @@ class JikanError {
         error: error ?? this.error,
       );
 
-  factory JikanError.fromRawJson(String str) => JikanError.fromJson(json.decode(str));
+  factory JikanError.fromRawJson(String str) =>
+      JikanError.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
