@@ -22,6 +22,6 @@ jobs:
     - name: Run tests
       run: pub run test --coverage="coverage"
     - name: Format coverage
-      run: format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
+      run: pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
     - name: Ignore auto-generate models in coverage
       run: pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
