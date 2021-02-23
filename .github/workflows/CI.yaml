@@ -17,9 +17,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install Packages
       run: pub get
-    - name: Tests
-      run: pub run test_coverage
+    - name: Install coverage
+      run: dart pub global activate coverage
+    - name: Run tests
+      run: dart test --coverage="coverage"
+    - name: Format coverage
+      run: format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
     - name: Ignore auto-generate models in coverage
       run: pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
-    - name: Code Coverage -> Check
-      uses: ChicagoFlutter/lcov-cop@v1.0.0
