@@ -98,7 +98,7 @@ import 'index.dart';
 /// {@macro jikan_docs}
 class Jikan with JikanDocs {
   /// {@macro jikan_docs}
-  const Jikan();
+  Jikan();
 
   get getAnime => jikanGetAnime;
   get getAnimeEpisodes => jikanGetAnimeEpisodes;
