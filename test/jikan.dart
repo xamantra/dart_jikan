@@ -1,3 +1,3 @@
 import 'package:dart_jikan/src/index.dart';
 
-const jikan = Jikan();
+const jikan = const Jikan();
