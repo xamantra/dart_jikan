@@ -6,6 +6,7 @@ export 'index.dart';
 export 'jikan_date.dart';
 export 'person.dart';
 export 'picture.dart';
+export 'promo_video.dart';
 export 'related.dart';
 export 'release_date.dart';
 export 'release_prop_date.dart';

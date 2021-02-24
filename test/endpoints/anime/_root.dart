@@ -6,4 +6,5 @@ Future<void> anime_test() async {
   await episodes();
   await news();
   await pictures();
+  await videos();
 }

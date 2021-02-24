@@ -4,4 +4,5 @@ export 'episodes.dart';
 export 'index.dart';
 export 'news.dart';
 export 'pictures.dart';
+export 'videos.dart';
 export '_root.dart';

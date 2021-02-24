@@ -4,3 +4,4 @@ export 'index.dart';
 export 'news.dart';
 export 'pictures.dart';
 export 'root.dart';
+export 'videos.dart';

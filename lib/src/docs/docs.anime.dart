@@ -1,8 +1,7 @@
-import 'models/anime/index.dart';
-import 'models/manga/index.dart';
-import 'utils/index.dart';
+import '../models/anime/index.dart';
+import '../utils/index.dart';
 
-mixin JikanDocs {
+mixin JikanAnimeDocs {
   /// A single anime object with all its details.
   ///
   /// **Endpoint Path:** `/anime/{id}`
@@ -36,7 +35,7 @@ mixin JikanDocs {
   /// ```
   JikanEndpoint<JikanAnimeCharacterStaff> get getAnimeCharacterStaff;
 
-  /// List of anime related news.
+  /// List of Related news
   ///
   /// **Endpoint Path:** `/anime/{id}/news`
   /// ### Example
@@ -46,7 +45,7 @@ mixin JikanDocs {
   /// ```
   JikanEndpoint<JikanAnimeNews> get getAnimeNews;
 
-  /// List of anime pictures.
+  /// List of Related pictures
   ///
   /// **Endpoint Path:** `/anime/{id}/pictures`
   /// ### Example
@@ -56,13 +55,13 @@ mixin JikanDocs {
   /// ```
   JikanEndpoint<JikanAnimePictures> get getAnimePictures;
 
-  /// A single manga object with all its details.
+  /// List of Promotional Videos & episodes (if any)
   ///
-  /// **Endpoint Path:** `/manga/{id}`
+  /// **Endpoint Path:** `/anime/{id}/videos`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getManga(1517);
-  /// var jojo = result.response; // JoJo Part 1 details
+  /// var result = await jikan.getAnimeVideos(21);
+  /// var onepiece = result.response; // One Piece videos and episodes
   /// ```
-  JikanEndpoint<JikanMangaDetails> get getManga;
+  JikanEndpoint<JikanAnimeVideos> get getAnimeVideos;
 }

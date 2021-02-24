@@ -1,8 +1,6 @@
-import 'package:dart_jikan/src/models/anime/index.dart';
-
+import 'docs/index.dart';
 import 'endpoints/anime/index.dart';
 import 'endpoints/manga/index.dart';
-import 'index.dart';
 
 /// {@template jikan_docs}
 /// # Jikan
@@ -98,7 +96,7 @@ import 'index.dart';
 /// {@endtemplate}
 
 /// {@macro jikan_docs}
-class Jikan with JikanDocs {
+class Jikan with JikanAnimeDocs, JikanMangaDocs {
   /// {@macro jikan_docs}
   Jikan();
 
@@ -107,5 +105,6 @@ class Jikan with JikanDocs {
   get getAnimeEpisodes => jikanGetAnimeEpisodes;
   get getAnimeNews => jikanGetAnimeNews;
   get getAnimePictures => jikanGetAnimePictures;
+  get getAnimeVideos => jikanGetAnimeVideos;
   get getManga => jikanGetManga;
 }
