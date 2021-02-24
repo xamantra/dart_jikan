@@ -64,4 +64,14 @@ mixin JikanAnimeDocs {
   /// var onepiece = result.response; // One Piece videos and episodes
   /// ```
   JikanEndpoint<JikanAnimeVideos> get getAnimeVideos;
+
+  /// Related statistical information
+  ///
+  /// **Endpoint Path:** `/anime/{id}/stats`
+  /// ### Example
+  /// ```dart
+  /// var result = await jikan.getAnimeStats(21);
+  /// var onepiece = result.response; // One Piece statistics
+  /// ```
+  JikanEndpoint<JikanAnimeStats> get getAnimeStats;
 }

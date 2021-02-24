@@ -6,4 +6,5 @@ export 'episode_video.dart';
 export 'index.dart';
 export 'news.dart';
 export 'pictures.dart';
+export 'stats.dart';
 export 'videos.dart';

@@ -10,3 +10,4 @@ export 'promo_video.dart';
 export 'related.dart';
 export 'release_date.dart';
 export 'release_prop_date.dart';
+export 'score_vote.dart';

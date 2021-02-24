@@ -106,5 +106,6 @@ class Jikan with JikanAnimeDocs, JikanMangaDocs {
   get getAnimeNews => jikanGetAnimeNews;
   get getAnimePictures => jikanGetAnimePictures;
   get getAnimeVideos => jikanGetAnimeVideos;
+  get getAnimeStats => jikanGetAnimeStats;
   get getManga => jikanGetManga;
 }
