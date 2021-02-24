@@ -1,6 +1,5 @@
+import '../../models/anime/index.dart';
 import 'package:meta/meta.dart';
-
-import 'package:jikan_models/jikan_models.dart';
 
 import '../../utils/index.dart';
 

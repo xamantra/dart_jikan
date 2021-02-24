@@ -1,5 +1,6 @@
-import 'package:jikan_models/jikan_models.dart';
 import 'package:meta/meta.dart';
+
+import '../models/index.dart';
 
 class JikanResult<TResponse> {
   JikanResult({

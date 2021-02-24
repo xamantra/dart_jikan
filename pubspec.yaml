@@ -9,8 +9,6 @@ environment:
 dependencies:
   http: ^0.12.2
   meta: ^1.2.4
-  jikan_models:
-    path: ./jikan_models/
 
 dev_dependencies:  
   test: 1.14.3

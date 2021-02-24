@@ -1,7 +1,6 @@
 import 'package:meta/meta.dart';
 
-import 'package:jikan_models/jikan_models.dart';
-
+import '../../models/anime/index.dart';
 import '../../utils/index.dart';
 
 Future<JikanResult<JikanAnimeDetails>> jikanGetAnime({

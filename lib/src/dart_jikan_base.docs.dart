@@ -1,5 +1,5 @@
-import 'package:jikan_models/jikan_models.dart';
-
+import 'models/anime/index.dart';
+import 'models/manga/index.dart';
 import 'utils/index.dart';
 
 mixin JikanDocs {
