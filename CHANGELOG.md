@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Added more endpoints for anime.
+- Setup readme header and logo with CI badges.
+
 ## 0.1.3
 
 - In development. Not usable yet.
