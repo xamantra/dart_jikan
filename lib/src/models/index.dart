@@ -1,3 +1,4 @@
+export 'article.dart';
 export 'character.dart';
 export 'entry_data_item.dart';
 export 'error.dart';

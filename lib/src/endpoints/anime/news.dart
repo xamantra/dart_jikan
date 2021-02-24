@@ -1,13 +1,14 @@
 import '../../models/anime/index.dart';
+
 import '../../utils/index.dart';
 
-Future<JikanResult<JikanAnimeDetails>> jikanGetAnime(
+Future<JikanResult<JikanAnimeNews>> jikanGetAnimeNews(
   int animeId, {
   Map<String, String> headers,
 }) async {
   var result = await request(
-    'anime/$animeId',
-    JikanAnimeDetails.fromRawJson,
+    'anime/$animeId/news',
+    JikanAnimeNews.fromRawJson,
     headers,
   );
   return result;

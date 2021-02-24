@@ -4,8 +4,8 @@ import '../../jikan.dart';
 import '../../limit.dart';
 
 Future<void> characters_staff() async {
-  var result1 = await limit(jikan.getAnimeCharacterStaff(id: 21));
-  var result2 = await limit(jikan.getAnimeCharacterStaff(id: 999999));
+  var result1 = await limit(jikan.getAnimeCharacterStaff(21));
+  var result2 = await limit(jikan.getAnimeCharacterStaff(999999));
 
   test('should return one piece characters and staffs', () async {
     // Brook

@@ -101,7 +101,8 @@ class Jikan with JikanDocs {
   Jikan();
 
   get getAnime => jikanGetAnime;
-  get getAnimeEpisodes => jikanGetAnimeEpisodes;
   get getAnimeCharacterStaff => jikanGetAnimeCharacterStaff;
+  get getAnimeEpisodes => jikanGetAnimeEpisodes;
+  get getAnimeNews => jikanGetAnimeNews;
   get getManga => jikanGetManga;
 }
