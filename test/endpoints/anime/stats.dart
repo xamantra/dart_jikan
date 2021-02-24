@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 import '../../jikan.dart';
 import '../../limit.dart';
 
-Future<void> main() async {
+Future<void> stats() async {
   var result1 = await limit(jikan.getAnimeStats(21));
   var result2 = await limit(jikan.getAnimeStats(999999));
 
