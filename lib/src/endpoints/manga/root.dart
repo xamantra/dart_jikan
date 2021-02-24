@@ -1,6 +1,6 @@
+import 'package:jikan_models/jikan_models.dart';
 import 'package:meta/meta.dart';
 
-import '../../models/manga/index.dart';
 import '../../utils/index.dart';
 
 Future<JikanResult<JikanMangaDetails>> jikanGetManga({

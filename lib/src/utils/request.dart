@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
+import 'package:jikan_models/jikan_models.dart';
 
-import '../models/index.dart';
 import 'index.dart';
 
 const _logHeader = '(dart_jikan)';
