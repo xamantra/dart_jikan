@@ -1,3 +1,5 @@
+import 'package:dart_jikan/src/models/anime/index.dart';
+
 import 'endpoints/anime/index.dart';
 import 'endpoints/manga/index.dart';
 import 'index.dart';
@@ -104,5 +106,6 @@ class Jikan with JikanDocs {
   get getAnimeCharacterStaff => jikanGetAnimeCharacterStaff;
   get getAnimeEpisodes => jikanGetAnimeEpisodes;
   get getAnimeNews => jikanGetAnimeNews;
+  get getAnimePictures => jikanGetAnimePictures;
   get getManga => jikanGetManga;
 }

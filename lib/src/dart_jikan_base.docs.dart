@@ -8,7 +8,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/anime/{id}`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getAnime(id: 21);
+  /// var result = await jikan.getAnime(21);
   /// var onepiece = result.response; // One Piece details
   /// ```
   JikanEndpoint<JikanAnimeDetails> get getAnime;
@@ -18,7 +18,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `anime/{id}/episodes/{page}`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getAnimeEpisodes(id: 21);
+  /// var result = await jikan.getAnimeEpisodes(21);
   /// var onepiece = result.response; // One Piece episodes on page #1
   /// ```
   /// #### Remarks
@@ -31,7 +31,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/anime/{id}/characters_staff`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getAnimeCharacterStaff(id: 21);
+  /// var result = await jikan.getAnimeCharacterStaff(21);
   /// var onepiece = result.response; // One Piece characters and staffs
   /// ```
   JikanEndpoint<JikanAnimeCharacterStaff> get getAnimeCharacterStaff;
@@ -41,17 +41,27 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/anime/{id}/news`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getAnimeNews(id: 21);
+  /// var result = await jikan.getAnimeNews(21);
   /// var onepiece = result.response; // One Piece related news
   /// ```
   JikanEndpoint<JikanAnimeNews> get getAnimeNews;
+
+  /// List of anime pictures.
+  ///
+  /// **Endpoint Path:** `/anime/{id}/pictures`
+  /// ### Example
+  /// ```dart
+  /// var result = await jikan.getAnimePictures(21);
+  /// var onepiece = result.response; // One Piece pictures
+  /// ```
+  JikanEndpoint<JikanAnimePictures> get getAnimePictures;
 
   /// A single manga object with all its details.
   ///
   /// **Endpoint Path:** `/manga/{id}`
   /// ### Example
   /// ```dart
-  /// var result = await jikan.getManga(id: 1517);
+  /// var result = await jikan.getManga(1517);
   /// var jojo = result.response; // JoJo Part 1 details
   /// ```
   JikanEndpoint<JikanMangaDetails> get getManga;
