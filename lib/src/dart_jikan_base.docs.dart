@@ -8,7 +8,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/anime/{id}`
   /// ### Example
   /// ```dart
-  /// var result = await jikanGetAnime(id: 21);
+  /// var result = await jikan.getAnime(id: 21);
   /// var onepiece = result.response; // One Piece details
   /// ```
   JikanEndpoint<JikanAnimeDetails> get getAnime;
@@ -18,7 +18,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `anime/{id}/episodes/{page}`
   /// ### Example
   /// ```dart
-  /// var result = await jikanGetAnimeEpisodes(id: 21);
+  /// var result = await jikan.getAnimeEpisodes(id: 21);
   /// var onepiece = result.response; // One Piece episodes on page #1
   /// ```
   /// #### Remarks
@@ -31,17 +31,17 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/anime/{id}/characters_staff`
   /// ### Example
   /// ```dart
-  /// var result = await jikanGetAnimeCharacterStaff(id: 21);
+  /// var result = await jikan.getAnimeCharacterStaff(id: 21);
   /// var onepiece = result.response; // One Piece characters and staffs
   /// ```
   JikanEndpoint<JikanAnimeCharacterStaff> get getAnimeCharacterStaff;
 
-  /// List of character and staff members.
+  /// List of anime related news.
   ///
   /// **Endpoint Path:** `/anime/{id}/news`
   /// ### Example
   /// ```dart
-  /// var result = await jikanGetAnimeCharacterStaff(id: 21);
+  /// var result = await jikan.getAnimeNews(id: 21);
   /// var onepiece = result.response; // One Piece related news
   /// ```
   JikanEndpoint<JikanAnimeNews> get getAnimeNews;
@@ -51,7 +51,7 @@ mixin JikanDocs {
   /// **Endpoint Path:** `/manga/{id}`
   /// ### Example
   /// ```dart
-  /// var result = await jikanGetManga(id: 1517);
+  /// var result = await jikan.getManga(id: 1517);
   /// var jojo = result.response; // JoJo Part 1 details
   /// ```
   JikanEndpoint<JikanMangaDetails> get getManga;
