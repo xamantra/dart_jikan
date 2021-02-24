@@ -26,7 +26,8 @@ class EpisodeVideo {
         imageUrl: imageUrl ?? this.imageUrl,
       );
 
-  factory EpisodeVideo.fromRawJson(String str) => EpisodeVideo.fromJson(json.decode(str));
+  factory EpisodeVideo.fromRawJson(String str) =>
+      EpisodeVideo.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

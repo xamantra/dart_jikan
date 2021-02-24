@@ -16,12 +16,14 @@ Future<JikanResult<T>> request<T>(
   var response = await http.get(url, headers: headers);
   if (response.statusCode != 200) {
     var error = JikanError.fromRawJson(response.body);
-    var result = JikanResult(response: null, error: error, statusCode: response.statusCode);
+    var result = JikanResult(
+        response: null, error: error, statusCode: response.statusCode);
     print('$_logHeader : Request [error] -> "$url"');
     return result;
   }
   var data = transformer(response.body);
-  var result = JikanResult(response: data, error: null, statusCode: response.statusCode);
+  var result =
+      JikanResult(response: data, error: null, statusCode: response.statusCode);
   print('$_logHeader : Request [success] -> "$url"');
   return result;
 }

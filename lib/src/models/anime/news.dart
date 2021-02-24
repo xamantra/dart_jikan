@@ -28,21 +28,31 @@ class JikanAnimeNews {
         articles: articles ?? this.articles,
       );
 
-  static JikanAnimeNews fromRawJson(String str) => JikanAnimeNews.fromJson(json.decode(str));
+  static JikanAnimeNews fromRawJson(String str) =>
+      JikanAnimeNews.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory JikanAnimeNews.fromJson(Map<String, dynamic> json) => JikanAnimeNews(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],
-        requestCached: json["request_cached"] == null ? null : json["request_cached"],
-        requestCacheExpiry: json["request_cache_expiry"] == null ? null : json["request_cache_expiry"],
-        articles: json["articles"] == null ? null : List<Article>.from(json["articles"].map((x) => Article.fromJson(x))),
+        requestCached:
+            json["request_cached"] == null ? null : json["request_cached"],
+        requestCacheExpiry: json["request_cache_expiry"] == null
+            ? null
+            : json["request_cache_expiry"],
+        articles: json["articles"] == null
+            ? null
+            : List<Article>.from(
+                json["articles"].map((x) => Article.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "request_hash": requestHash == null ? null : requestHash,
         "request_cached": requestCached == null ? null : requestCached,
-        "request_cache_expiry": requestCacheExpiry == null ? null : requestCacheExpiry,
-        "articles": articles == null ? null : List<dynamic>.from(articles.map((x) => x.toJson())),
+        "request_cache_expiry":
+            requestCacheExpiry == null ? null : requestCacheExpiry,
+        "articles": articles == null
+            ? null
+            : List<dynamic>.from(articles.map((x) => x.toJson())),
       };
 }

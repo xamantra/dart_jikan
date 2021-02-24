@@ -22,7 +22,8 @@ class PromoVideo {
         videoUrl: videoUrl ?? this.videoUrl,
       );
 
-  factory PromoVideo.fromRawJson(String str) => PromoVideo.fromJson(json.decode(str));
+  factory PromoVideo.fromRawJson(String str) =>
+      PromoVideo.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
