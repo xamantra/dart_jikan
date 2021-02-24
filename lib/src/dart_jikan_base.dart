@@ -100,6 +100,7 @@ class Jikan with JikanAnimeDocs, JikanMangaDocs {
   /// {@macro jikan_docs}
   Jikan();
 
+  /* ANIME */
   get getAnime => jikanGetAnime;
   get getAnimeCharacterStaff => jikanGetAnimeCharacterStaff;
   get getAnimeEpisodes => jikanGetAnimeEpisodes;
@@ -107,5 +108,9 @@ class Jikan with JikanAnimeDocs, JikanMangaDocs {
   get getAnimePictures => jikanGetAnimePictures;
   get getAnimeVideos => jikanGetAnimeVideos;
   get getAnimeStats => jikanGetAnimeStats;
+  /* ANIME */
+
+  /* MANGA */
   get getManga => jikanGetManga;
+  /* MANGA */
 }
