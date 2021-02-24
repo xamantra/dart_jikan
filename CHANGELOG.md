@@ -1,7 +1,3 @@
-## 0.1.4
-
-- trying monorepo for jikan models.
-
 ## 0.1.3
 
 - In development. Not usable yet.
