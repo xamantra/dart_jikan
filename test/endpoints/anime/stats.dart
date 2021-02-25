@@ -5,8 +5,8 @@ import '../../jikan.dart';
 import '../../limit.dart';
 
 Future<void> stats() async {
-  var result1 = await limit(jikan.getAnimeStats(21));
-  var result2 = await limit(jikan.getAnimeStats(999999));
+  var result1 = await limit(jikan.getAnimeStats(animeId: 21));
+  var result2 = await limit(jikan.getAnimeStats(animeId: 999999));
 
   test('should return one piece statistics', () async {
     expect(result1.response.total >= (1349034 - 500), true);

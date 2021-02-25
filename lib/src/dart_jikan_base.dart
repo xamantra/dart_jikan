@@ -1,6 +1,4 @@
-import 'docs/index.dart';
-import 'endpoints/anime/index.dart';
-import 'endpoints/manga/index.dart';
+import 'endpoints/index.dart';
 
 /// {@template jikan_docs}
 /// # Jikan
@@ -96,21 +94,7 @@ import 'endpoints/manga/index.dart';
 /// {@endtemplate}
 
 /// {@macro jikan_docs}
-class Jikan with JikanAnimeDocs, JikanMangaDocs {
+class Jikan with JikanAnimeEndpoints, JikanMangaEndpoints {
   /// {@macro jikan_docs}
   Jikan();
-
-  /* ANIME */
-  get getAnime => jikanGetAnime;
-  get getAnimeCharacterStaff => jikanGetAnimeCharacterStaff;
-  get getAnimeEpisodes => jikanGetAnimeEpisodes;
-  get getAnimeNews => jikanGetAnimeNews;
-  get getAnimePictures => jikanGetAnimePictures;
-  get getAnimeVideos => jikanGetAnimeVideos;
-  get getAnimeStats => jikanGetAnimeStats;
-  /* ANIME */
-
-  /* MANGA */
-  get getManga => jikanGetManga;
-  /* MANGA */
 }

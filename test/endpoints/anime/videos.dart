@@ -4,8 +4,8 @@ import '../../jikan.dart';
 import '../../limit.dart';
 
 Future<void> videos() async {
-  var result1 = await limit(jikan.getAnimeVideos(21));
-  var result2 = await limit(jikan.getAnimeVideos(999999));
+  var result1 = await limit(jikan.getAnimeVideos(animeId: 21));
+  var result2 = await limit(jikan.getAnimeVideos(animeId: 999999));
 
   test('should return one piece videos and episodes', () async {
     expect(result1.response.promo.any((x) => x.title == 'Wano Kuni Trailer'), true);
