@@ -126,4 +126,16 @@ mixin JikanAnimeEndpoints implements JikanAnimeDocs {
     );
     return result;
   }
+
+  Future<JikanResult<JikanAnimeRecommendations>> getAnimeRecommendations({
+    @required int animeId,
+    Map<String, String> headers,
+  }) async {
+    var result = await request(
+      'anime/$animeId/recommendations',
+      JikanAnimeRecommendations.fromRawJson,
+      headers,
+    );
+    return result;
+  }
 }

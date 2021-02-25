@@ -10,6 +10,7 @@ export 'more_info.dart';
 export 'person.dart';
 export 'picture.dart';
 export 'promo_video.dart';
+export 'recommendation.dart';
 export 'related.dart';
 export 'release_date.dart';
 export 'release_prop_date.dart';

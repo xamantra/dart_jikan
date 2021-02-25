@@ -6,6 +6,7 @@ export 'index.dart';
 export 'more_info.dart';
 export 'news.dart';
 export 'pictures.dart';
+export 'recommendations.dart';
 export 'reviews.dart';
 export 'stats.dart';
 export 'videos.dart';

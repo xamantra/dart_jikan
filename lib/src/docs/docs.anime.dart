@@ -101,4 +101,14 @@ mixin JikanAnimeDocs {
   /// var onepiece = result.response; // one piece reviews.
   /// ```
   getAnimeReviews();
+
+  /// List of Recommendations and their weightage made by users
+  ///
+  /// **Endpoint Path:** `/anime/{id}/recommendations`
+  /// ### Example
+  /// ```dart
+  /// var result = await jikan.getAnimeRecommendations(animeId: 21);
+  /// var onepiece = result.response; // one piece recommendations.
+  /// ```
+  getAnimeRecommendations();
 }
