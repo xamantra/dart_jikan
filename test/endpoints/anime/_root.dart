@@ -8,4 +8,5 @@ Future<void> anime_test() async {
   await pictures();
   await videos();
   await stats();
+  await forum();
 }

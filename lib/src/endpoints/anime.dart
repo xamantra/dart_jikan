@@ -89,4 +89,16 @@ mixin JikanAnimeEndpoints implements JikanAnimeDocs {
     );
     return result;
   }
+
+  Future<JikanResult<JikanAnimeForum>> getAnimeForum({
+    @required int animeId,
+    Map<String, String> headers,
+  }) async {
+    var result = await request(
+      'anime/$animeId/forum',
+      JikanAnimeForum.fromRawJson,
+      headers,
+    );
+    return result;
+  }
 }

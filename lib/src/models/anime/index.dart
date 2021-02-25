@@ -1,8 +1,9 @@
 export 'anime_details.dart';
 export 'characters_staffs.dart';
 export 'episode.dart';
-export 'episode_video.dart';
 export 'episodes.dart';
+export 'episode_video.dart';
+export 'forum.dart';
 export 'index.dart';
 export 'news.dart';
 export 'pictures.dart';
