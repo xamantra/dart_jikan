@@ -6,6 +6,7 @@ export 'forum_topic.dart';
 export 'index.dart';
 export 'jikan_date.dart';
 export 'last_forum_topic_post.dart';
+export 'more_info.dart';
 export 'person.dart';
 export 'picture.dart';
 export 'promo_video.dart';

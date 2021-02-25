@@ -2,6 +2,7 @@ import 'package:meta/meta.dart';
 
 import '../docs/index.dart';
 import '../models/anime/index.dart';
+import '../models/index.dart';
 import '../utils/index.dart';
 
 mixin JikanAnimeEndpoints implements JikanAnimeDocs {
@@ -97,6 +98,18 @@ mixin JikanAnimeEndpoints implements JikanAnimeDocs {
     var result = await request(
       'anime/$animeId/forum',
       JikanAnimeForum.fromRawJson,
+      headers,
+    );
+    return result;
+  }
+
+  Future<JikanResult<JikanMoreInfo>> getAnimeMoreInfo({
+    @required int animeId,
+    Map<String, String> headers,
+  }) async {
+    var result = await request(
+      'anime/$animeId/moreinfo',
+      JikanMoreInfo.fromRawJson,
       headers,
     );
     return result;

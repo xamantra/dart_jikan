@@ -3,6 +3,7 @@ export 'characters_staff.dart';
 export 'episodes.dart';
 export 'forum.dart';
 export 'index.dart';
+export 'more_info.dart';
 export 'news.dart';
 export 'pictures.dart';
 export 'stats.dart';

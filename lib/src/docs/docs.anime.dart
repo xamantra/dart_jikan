@@ -81,4 +81,14 @@ mixin JikanAnimeDocs {
   /// var onepiece = result.response; // One Piece related forum topics
   /// ```
   getAnimeForum();
+
+  /// A string of more information (if any)
+  ///
+  /// **Endpoint Path:** `/anime/{id}/moreinfo`
+  /// ### Example
+  /// ```dart
+  /// var result = await jikan.getAnimeMoreInfo(animeId: 21);
+  /// var onepiece = result.response; // more info about one piece.
+  /// ```
+  getAnimeMoreInfo();
 }
