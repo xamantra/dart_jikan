@@ -7,5 +7,8 @@ export 'forum.dart';
 export 'index.dart';
 export 'news.dart';
 export 'pictures.dart';
+export 'review.dart';
+export 'reviewer.dart';
+export 'review_score.dart';
 export 'stats.dart';
 export 'videos.dart';

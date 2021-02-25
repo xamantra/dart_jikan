@@ -10,4 +10,5 @@ Future<void> anime_test() async {
   await stats();
   await forum();
   await more_info();
+  await reviews();
 }
