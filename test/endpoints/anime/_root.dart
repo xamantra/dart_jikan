@@ -12,4 +12,5 @@ Future<void> anime_test() async {
   await more_info();
   await reviews();
   await recommendations();
+  await user_updates();
 }

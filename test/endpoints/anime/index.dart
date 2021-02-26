@@ -9,5 +9,6 @@ export 'pictures.dart';
 export 'recommendations.dart';
 export 'reviews.dart';
 export 'stats.dart';
+export 'user_updates.dart';
 export 'videos.dart';
 export '_root.dart';

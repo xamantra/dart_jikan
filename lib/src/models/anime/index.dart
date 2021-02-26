@@ -12,4 +12,6 @@ export 'review.dart';
 export 'reviewer.dart';
 export 'review_score.dart';
 export 'stats.dart';
+export 'user_anime_update.dart';
+export 'user_updates.dart';
 export 'videos.dart';

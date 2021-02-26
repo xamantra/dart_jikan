@@ -138,4 +138,16 @@ mixin JikanAnimeEndpoints implements JikanAnimeDocs {
     );
     return result;
   }
+
+  Future<JikanResult<JikanAnimeUserUpdates>> getAnimeUserUpdates({
+    @required int animeId,
+    Map<String, String> headers,
+  }) async {
+    var result = await request(
+      'anime/$animeId/userupdates',
+      JikanAnimeUserUpdates.fromRawJson,
+      headers,
+    );
+    return result;
+  }
 }

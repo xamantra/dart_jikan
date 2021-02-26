@@ -111,4 +111,14 @@ mixin JikanAnimeDocs {
   /// var onepiece = result.response; // one piece recommendations.
   /// ```
   getAnimeRecommendations();
+
+  /// List of the latest list updates made by users
+  ///
+  /// **Endpoint Path:** `/anime/{id}/userupdates`
+  /// ### Example
+  /// ```dart
+  /// var result = await jikan.getAnimeUserUpdates(animeId: 21);
+  /// var onepiece = result.response; // one piece user updates.
+  /// ```
+  getAnimeUserUpdates();
 }
