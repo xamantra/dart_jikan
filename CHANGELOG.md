@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Covered all [`Anime`](https://jikan.docs.apiary.io/#reference/0/anime) endpoints.
+
 ## 0.2.0
 
 - Added more endpoints for anime.

@@ -1,6 +1,6 @@
 name: dart_jikan
 description: Dart wrapper for Jikan MAL api. Well documented and highly tested.
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/xamantra/dart_jikan
 
 environment:
