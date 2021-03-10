@@ -7,7 +7,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnime(animeId: 21);
   /// var onepiece = result.response; // One Piece details
   /// ```
-  getAnime();
+  getAnime({required int animeId});
 
   /// List of episodes.
   ///
@@ -20,7 +20,7 @@ mixin JikanAnimeDocs {
   /// #### Remarks
   /// - The response field `episodes_last_page` will tell you the last page of the paginated episodes list.
   /// - The episodes page on MyAnimeList get paginated after 100 episodes. If there's an anime with more than 100 episodes, you'll have to use the parameter `page` *(starts from `1`)*.
-  getAnimeEpisodes();
+  getAnimeEpisodes({required int animeId});
 
   /// List of character and staff members.
   ///
@@ -30,7 +30,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeCharacterStaff(animeId: 21);
   /// var onepiece = result.response; // One Piece characters and staffs
   /// ```
-  getAnimeCharacterStaff();
+  getAnimeCharacterStaff({required int animeId});
 
   /// List of Related news
   ///
@@ -40,7 +40,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeNews(animeId: 21);
   /// var onepiece = result.response; // One Piece related news
   /// ```
-  getAnimeNews();
+  getAnimeNews({required int animeId});
 
   /// List of Related pictures
   ///
@@ -50,7 +50,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimePictures(animeId: 21);
   /// var onepiece = result.response; // One Piece pictures
   /// ```
-  getAnimePictures();
+  getAnimePictures({required int animeId});
 
   /// List of Promotional Videos & episodes (if any)
   ///
@@ -60,7 +60,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeVideos(animeId: 21);
   /// var onepiece = result.response; // One Piece videos and episodes
   /// ```
-  getAnimeVideos();
+  getAnimeVideos({required int animeId});
 
   /// Related statistical information
   ///
@@ -70,7 +70,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeStats(animeId: 21);
   /// var onepiece = result.response; // One Piece statistics
   /// ```
-  getAnimeStats();
+  getAnimeStats({required int animeId});
 
   /// List of Related forum topics
   ///
@@ -80,7 +80,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeForum(animeId: 21);
   /// var onepiece = result.response; // One Piece related forum topics
   /// ```
-  getAnimeForum();
+  getAnimeForum({required int animeId});
 
   /// A string of more information (if any)
   ///
@@ -90,7 +90,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeMoreInfo(animeId: 21);
   /// var onepiece = result.response; // more info about one piece.
   /// ```
-  getAnimeMoreInfo();
+  getAnimeMoreInfo({required int animeId});
 
   /// List of Reviews written by users
   ///
@@ -100,7 +100,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeReviews(animeId: 21);
   /// var onepiece = result.response; // one piece reviews.
   /// ```
-  getAnimeReviews();
+  getAnimeReviews({required int animeId});
 
   /// List of Recommendations and their weightage made by users
   ///
@@ -110,7 +110,7 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeRecommendations(animeId: 21);
   /// var onepiece = result.response; // one piece recommendations.
   /// ```
-  getAnimeRecommendations();
+  getAnimeRecommendations({required int animeId});
 
   /// List of the latest list updates made by users
   ///
@@ -120,5 +120,5 @@ mixin JikanAnimeDocs {
   /// var result = await jikan.getAnimeUserUpdates(animeId: 21);
   /// var onepiece = result.response; // one piece user updates.
   /// ```
-  getAnimeUserUpdates();
+  getAnimeUserUpdates({required int animeId});
 }

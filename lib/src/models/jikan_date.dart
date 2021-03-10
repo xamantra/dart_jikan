@@ -7,14 +7,14 @@ class JikanDate {
     this.year,
   });
 
-  final int day;
-  final int month;
-  final int year;
+  final int? day;
+  final int? month;
+  final int? year;
 
   JikanDate copyWith({
-    int day,
-    int month,
-    int year,
+    int? day,
+    int? month,
+    int? year,
   }) =>
       JikanDate(
         day: day ?? this.day,
@@ -22,10 +22,9 @@ class JikanDate {
         year: year ?? this.year,
       );
 
-  factory JikanDate.fromRawJson(String str) =>
-      JikanDate.fromJson(json.decode(str));
+  factory JikanDate.fromRawJson(String str) => JikanDate.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory JikanDate.fromJson(Map<String, dynamic> json) => JikanDate(
         day: json["day"] == null ? null : json["day"],

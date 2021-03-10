@@ -8,12 +8,12 @@ Future<void> episodes() async {
   var result2 = await limit(jikan.getAnimeEpisodes(animeId: 999999));
 
   test('should return one piece episodes', () async {
-    expect(result1.response.episodes.any((x) => x.episodeId == 481), true);
+    expect(result1.response!.episodes!.any((x) => x.episodeId == 481), true);
     expect(result1.hasData, true);
   });
 
   test('should return empty episodes list', () async {
-    expect(result2.response.episodes.isEmpty, true);
+    expect(result2.response!.episodes!.isEmpty, true);
     expect(result2.hasData, true);
   });
 }

@@ -8,7 +8,7 @@ Future<void> reviews() async {
   var result2 = await limit(jikan.getAnimeReviews(animeId: 999999));
 
   test('should return one piece reviews', () async {
-    expect(result1.response.reviews.any((x) => x.malId == 2772), true);
+    expect(result1.response!.reviews!.any((x) => x.malId == 2772), true);
     expect(result1.hasData, true);
   });
 

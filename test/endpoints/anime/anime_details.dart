@@ -8,7 +8,7 @@ Future<void> anime_details() async {
   var result2 = await limit(jikan.getAnime(animeId: 999999));
 
   test('should return one piece', () async {
-    expect(result1.response.malId, 21);
+    expect(result1.response!.malId, 21);
     expect(result1.hasData, true);
   });
 

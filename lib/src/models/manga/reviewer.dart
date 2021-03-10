@@ -11,18 +11,18 @@ class MangaReviewer {
     this.scores,
   });
 
-  final String url;
-  final String imageUrl;
-  final String username;
-  final int amountSeen;
-  final MangaReviewScore scores;
+  final String? url;
+  final String? imageUrl;
+  final String? username;
+  final int? amountSeen;
+  final MangaReviewScore? scores;
 
   MangaReviewer copyWith({
-    String url,
-    String imageUrl,
-    String username,
-    int chaptersRead,
-    MangaReviewScore scores,
+    String? url,
+    String? imageUrl,
+    String? username,
+    int? chaptersRead,
+    MangaReviewScore? scores,
   }) =>
       MangaReviewer(
         url: url ?? this.url,
@@ -34,7 +34,7 @@ class MangaReviewer {
 
   factory MangaReviewer.fromRawJson(String str) => MangaReviewer.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory MangaReviewer.fromJson(Map<String, dynamic> json) => MangaReviewer(
         url: json["url"] == null ? null : json["url"],
@@ -49,6 +49,6 @@ class MangaReviewer {
         "image_url": imageUrl == null ? null : imageUrl,
         "username": username == null ? null : username,
         "chapters_read": amountSeen == null ? null : amountSeen,
-        "scores": scores == null ? null : scores.toJson(),
+        "scores": scores == null ? null : scores!.toJson(),
       };
 }

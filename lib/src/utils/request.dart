@@ -5,15 +5,15 @@ import 'index.dart';
 
 const _logHeader = '(dart_jikan)';
 
-Future<JikanResult<T>> request<T>(
+Future<JikanResult<T?>> request<T>(
   String path,
   T Function(String) transformer,
-  Map<String, String> headers, {
+  Map<String, String>? headers, {
   bool returnPlain = false,
 }) async {
   var url = '$jikan_base/$path';
   print('$_logHeader : Requesting [get] -> "$url"');
-  var response = await http.get(url, headers: headers);
+  var response = await http.get(Uri.parse(url), headers: headers);
   if (response.statusCode != 200) {
     var error = JikanError.fromRawJson(response.body);
     var result = JikanResult(

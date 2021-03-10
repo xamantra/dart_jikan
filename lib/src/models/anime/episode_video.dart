@@ -8,16 +8,16 @@ class EpisodeVideo {
     this.imageUrl,
   });
 
-  final String title;
-  final String episode;
-  final String url;
-  final String imageUrl;
+  final String? title;
+  final String? episode;
+  final String? url;
+  final String? imageUrl;
 
   EpisodeVideo copyWith({
-    String title,
-    String episode,
-    String url,
-    String imageUrl,
+    String? title,
+    String? episode,
+    String? url,
+    String? imageUrl,
   }) =>
       EpisodeVideo(
         title: title ?? this.title,
@@ -26,10 +26,9 @@ class EpisodeVideo {
         imageUrl: imageUrl ?? this.imageUrl,
       );
 
-  factory EpisodeVideo.fromRawJson(String str) =>
-      EpisodeVideo.fromJson(json.decode(str));
+  factory EpisodeVideo.fromRawJson(String str) => EpisodeVideo.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory EpisodeVideo.fromJson(Map<String, dynamic> json) => EpisodeVideo(
         title: json["title"] == null ? null : json["title"],

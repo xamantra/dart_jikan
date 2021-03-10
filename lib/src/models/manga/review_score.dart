@@ -9,18 +9,18 @@ class MangaReviewScore {
     this.enjoyment,
   });
 
-  final int overall;
-  final int story;
-  final int art;
-  final int character;
-  final int enjoyment;
+  final int? overall;
+  final int? story;
+  final int? art;
+  final int? character;
+  final int? enjoyment;
 
   MangaReviewScore copyWith({
-    int overall,
-    int story,
-    int art,
-    int character,
-    int enjoyment,
+    int? overall,
+    int? story,
+    int? art,
+    int? character,
+    int? enjoyment,
   }) =>
       MangaReviewScore(
         overall: overall ?? this.overall,
@@ -32,7 +32,7 @@ class MangaReviewScore {
 
   factory MangaReviewScore.fromRawJson(String str) => MangaReviewScore.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory MangaReviewScore.fromJson(Map<String, dynamic> json) => MangaReviewScore(
         overall: json["overall"] == null ? null : json["overall"],

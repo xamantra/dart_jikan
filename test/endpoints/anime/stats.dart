@@ -9,8 +9,8 @@ Future<void> stats() async {
   var result2 = await limit(jikan.getAnimeStats(animeId: 999999));
 
   test('should return one piece statistics', () async {
-    expect(result1.response.total >= (1349034 - 500), true);
-    expect(result1.response.watching >= (884869 - 500), true);
+    expect(result1.response!.total! >= (1349034 - 500), true);
+    expect(result1.response!.watching! >= (884869 - 500), true);
     expect(result1.hasData, true);
   });
 

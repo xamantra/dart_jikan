@@ -8,16 +8,16 @@ class ForumTopicLastPost {
     this.datePosted,
   });
 
-  final String url;
-  final String authorName;
-  final String authorUrl;
-  final DateTime datePosted;
+  final String? url;
+  final String? authorName;
+  final String? authorUrl;
+  final DateTime? datePosted;
 
   ForumTopicLastPost copyWith({
-    String url,
-    String authorName,
-    String authorUrl,
-    DateTime datePosted,
+    String? url,
+    String? authorName,
+    String? authorUrl,
+    DateTime? datePosted,
   }) =>
       ForumTopicLastPost(
         url: url ?? this.url,
@@ -28,7 +28,7 @@ class ForumTopicLastPost {
 
   factory ForumTopicLastPost.fromRawJson(String str) => ForumTopicLastPost.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory ForumTopicLastPost.fromJson(Map<String, dynamic> json) => ForumTopicLastPost(
         url: json["url"] == null ? null : json["url"],
@@ -41,6 +41,6 @@ class ForumTopicLastPost {
         "url": url == null ? null : url,
         "author_name": authorName == null ? null : authorName,
         "author_url": authorUrl == null ? null : authorUrl,
-        "date_posted": datePosted == null ? null : datePosted.toIso8601String(),
+        "date_posted": datePosted == null ? null : datePosted!.toIso8601String(),
       };
 }

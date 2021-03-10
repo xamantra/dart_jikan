@@ -8,7 +8,7 @@ Future<void> user_updates() async {
   var result2 = await limit(jikan.getAnimeUserUpdates(animeId: 999999));
 
   test('should return cowboy bepop recommendations', () async {
-    expect(result1.response.users.isNotEmpty, true);
+    expect(result1.response!.users!.isNotEmpty, true);
     expect(result1.hasData, true);
   });
 

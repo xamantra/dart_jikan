@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: google/dart:2.8.4
+      image: google/dart:2.12.0
     steps:
     - uses: actions/checkout@v2
     - name: Install Packages
@@ -23,8 +23,10 @@ jobs:
       run: pub run test --coverage="coverage"
     - name: Format coverage
       run: pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
+    - name: Install remove_from_coverage
+      run: pub global activate remove_from_coverage
     - name: Ignore auto-generate models in coverage
-      run: pub run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
+      run: pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\bmodels\b'
     - name: Code Coverage -> Check
       uses: ChicagoFlutter/lcov-cop@v1.0.0
     - name: Code Coverage -> Upload

@@ -10,7 +10,7 @@ Future<void> forum() async {
   test('should return one piece related forum topics', () async {
     // no definite flag to check if something is related to one piece
     // forum is dynamic and can change everytime.
-    expect(result1.response.topics.any((x) => x.url.contains('https://myanimelist.net/forum/?topicid=')), true);
+    expect(result1.response!.topics!.any((x) => x.url!.contains('https://myanimelist.net/forum/?topicid=')), true);
     expect(result1.hasData, true);
   });
 

@@ -6,12 +6,12 @@ class Picture {
     this.small,
   });
 
-  final String large;
-  final String small;
+  final String? large;
+  final String? small;
 
   Picture copyWith({
-    String large,
-    String small,
+    String? large,
+    String? small,
   }) =>
       Picture(
         large: large ?? this.large,
@@ -20,7 +20,7 @@ class Picture {
 
   factory Picture.fromRawJson(String str) => Picture.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory Picture.fromJson(Map<String, dynamic> json) => Picture(
         large: json["large"] == null ? null : json["large"],

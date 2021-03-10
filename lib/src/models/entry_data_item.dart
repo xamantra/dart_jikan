@@ -32,16 +32,16 @@ class EntryDataItem {
     this.url,
   });
 
-  final int malId;
-  final String type;
-  final String name;
-  final String url;
+  final int? malId;
+  final String? type;
+  final String? name;
+  final String? url;
 
   EntryDataItem copyWith({
-    int malId,
-    String type,
-    String name,
-    String url,
+    int? malId,
+    String? type,
+    String? name,
+    String? url,
   }) =>
       EntryDataItem(
         malId: malId ?? this.malId,
@@ -50,10 +50,9 @@ class EntryDataItem {
         url: url ?? this.url,
       );
 
-  factory EntryDataItem.fromRawJson(String str) =>
-      EntryDataItem.fromJson(json.decode(str));
+  factory EntryDataItem.fromRawJson(String str) => EntryDataItem.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory EntryDataItem.fromJson(Map<String, dynamic> json) => EntryDataItem(
         malId: json["mal_id"] == null ? null : json["mal_id"],

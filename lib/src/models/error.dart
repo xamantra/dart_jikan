@@ -8,16 +8,16 @@ class JikanError {
     this.error,
   });
 
-  final int status;
-  final String type;
-  final String message;
-  final String error;
+  final int? status;
+  final String? type;
+  final String? message;
+  final String? error;
 
   JikanError copyWith({
-    int status,
-    String type,
-    String message,
-    String error,
+    int? status,
+    String? type,
+    String? message,
+    String? error,
   }) =>
       JikanError(
         status: status ?? this.status,
@@ -26,10 +26,9 @@ class JikanError {
         error: error ?? this.error,
       );
 
-  factory JikanError.fromRawJson(String str) =>
-      JikanError.fromJson(json.decode(str));
+  factory JikanError.fromRawJson(String str) => JikanError.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory JikanError.fromJson(Map<String, dynamic> json) => JikanError(
         status: json["status"] == null ? null : json["status"],

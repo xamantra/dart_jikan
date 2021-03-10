@@ -7,5 +7,5 @@ mixin JikanMangaDocs {
   /// var result = await jikan.getManga(mangaId: 1517);
   /// var jojo = result.response; // JoJo Part 1 details
   /// ```
-  getManga();
+  getManga({required int mangaId});
 }

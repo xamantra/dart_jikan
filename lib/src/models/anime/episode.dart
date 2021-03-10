@@ -13,26 +13,26 @@ class Episode {
     this.forumUrl,
   });
 
-  final int episodeId;
-  final String title;
-  final String titleJapanese;
-  final String titleRomanji;
-  final DateTime aired;
-  final bool filler;
-  final bool recap;
-  final String videoUrl;
-  final String forumUrl;
+  final int? episodeId;
+  final String? title;
+  final String? titleJapanese;
+  final String? titleRomanji;
+  final DateTime? aired;
+  final bool? filler;
+  final bool? recap;
+  final String? videoUrl;
+  final String? forumUrl;
 
   Episode copyWith({
-    int episodeId,
-    String title,
-    String titleJapanese,
-    String titleRomanji,
-    DateTime aired,
-    bool filler,
-    bool recap,
-    String videoUrl,
-    String forumUrl,
+    int? episodeId,
+    String? title,
+    String? titleJapanese,
+    String? titleRomanji,
+    DateTime? aired,
+    bool? filler,
+    bool? recap,
+    String? videoUrl,
+    String? forumUrl,
   }) =>
       Episode(
         episodeId: episodeId ?? this.episodeId,
@@ -48,15 +48,13 @@ class Episode {
 
   factory Episode.fromRawJson(String str) => Episode.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory Episode.fromJson(Map<String, dynamic> json) => Episode(
         episodeId: json["episode_id"] == null ? null : json["episode_id"],
         title: json["title"] == null ? null : json["title"],
-        titleJapanese:
-            json["title_japanese"] == null ? null : json["title_japanese"],
-        titleRomanji:
-            json["title_romanji"] == null ? null : json["title_romanji"],
+        titleJapanese: json["title_japanese"] == null ? null : json["title_japanese"],
+        titleRomanji: json["title_romanji"] == null ? null : json["title_romanji"],
         aired: json["aired"] == null ? null : DateTime.parse(json["aired"]),
         filler: json["filler"] == null ? null : json["filler"],
         recap: json["recap"] == null ? null : json["recap"],
@@ -69,7 +67,7 @@ class Episode {
         "title": title == null ? null : title,
         "title_japanese": titleJapanese == null ? null : titleJapanese,
         "title_romanji": titleRomanji == null ? null : titleRomanji,
-        "aired": aired == null ? null : aired.toIso8601String(),
+        "aired": aired == null ? null : aired!.toIso8601String(),
         "filler": filler == null ? null : filler,
         "recap": recap == null ? null : recap,
         "video_url": videoUrl == null ? null : videoUrl,

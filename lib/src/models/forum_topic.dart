@@ -14,24 +14,24 @@ class ForumTopic {
     this.lastPost,
   });
 
-  final int topicId;
-  final String url;
-  final String title;
-  final DateTime datePosted;
-  final String authorName;
-  final String authorUrl;
-  final int replies;
-  final ForumTopicLastPost lastPost;
+  final int? topicId;
+  final String? url;
+  final String? title;
+  final DateTime? datePosted;
+  final String? authorName;
+  final String? authorUrl;
+  final int? replies;
+  final ForumTopicLastPost? lastPost;
 
   ForumTopic copyWith({
-    int topicId,
-    String url,
-    String title,
-    DateTime datePosted,
-    String authorName,
-    String authorUrl,
-    int replies,
-    ForumTopicLastPost lastPost,
+    int? topicId,
+    String? url,
+    String? title,
+    DateTime? datePosted,
+    String? authorName,
+    String? authorUrl,
+    int? replies,
+    ForumTopicLastPost? lastPost,
   }) =>
       ForumTopic(
         topicId: topicId ?? this.topicId,
@@ -46,7 +46,7 @@ class ForumTopic {
 
   factory ForumTopic.fromRawJson(String str) => ForumTopic.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory ForumTopic.fromJson(Map<String, dynamic> json) => ForumTopic(
         topicId: json["topic_id"] == null ? null : json["topic_id"],
@@ -63,10 +63,10 @@ class ForumTopic {
         "topic_id": topicId == null ? null : topicId,
         "url": url == null ? null : url,
         "title": title == null ? null : title,
-        "date_posted": datePosted == null ? null : datePosted.toIso8601String(),
+        "date_posted": datePosted == null ? null : datePosted!.toIso8601String(),
         "author_name": authorName == null ? null : authorName,
         "author_url": authorUrl == null ? null : authorUrl,
         "replies": replies == null ? null : replies,
-        "last_post": lastPost == null ? null : lastPost.toJson(),
+        "last_post": lastPost == null ? null : lastPost!.toJson(),
       };
 }

@@ -8,7 +8,7 @@ Future<void> pictures() async {
   var result2 = await limit(jikan.getAnimePictures(animeId: 999999));
 
   test('should return one piece pictures', () async {
-    expect(result1.response.pictures.any((x) => x.large == 'https://cdn.myanimelist.net/images/anime/5/19082l.jpg'), true);
+    expect(result1.response!.pictures!.any((x) => x.large == 'https://cdn.myanimelist.net/images/anime/5/19082l.jpg'), true);
     expect(result1.hasData, true);
   });
 

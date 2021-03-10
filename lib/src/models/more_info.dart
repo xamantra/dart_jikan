@@ -8,16 +8,16 @@ class JikanMoreInfo {
     this.moreinfo,
   });
 
-  final String requestHash;
-  final bool requestCached;
-  final int requestCacheExpiry;
-  final String moreinfo;
+  final String? requestHash;
+  final bool? requestCached;
+  final int? requestCacheExpiry;
+  final String? moreinfo;
 
   JikanMoreInfo copyWith({
-    String requestHash,
-    bool requestCached,
-    int requestCacheExpiry,
-    String moreinfo,
+    String? requestHash,
+    bool? requestCached,
+    int? requestCacheExpiry,
+    String? moreinfo,
   }) =>
       JikanMoreInfo(
         requestHash: requestHash ?? this.requestHash,
@@ -28,7 +28,7 @@ class JikanMoreInfo {
 
   static JikanMoreInfo fromRawJson(String str) => JikanMoreInfo.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory JikanMoreInfo.fromJson(Map<String, dynamic> json) => JikanMoreInfo(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],

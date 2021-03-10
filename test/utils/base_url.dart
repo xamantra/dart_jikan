@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../limit.dart';
 
 Future<void> base_url() async {
-  var response = await limit(http.get(jikan_base));
+  var response = await limit(http.get(Uri.parse(jikan_base)));
 
   test('jikan base url must be correct', () async {
     expect(jikan_base, 'https://api.jikan.moe/v3');

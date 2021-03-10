@@ -12,24 +12,24 @@ class UserAnimeUpdate {
     this.date,
   });
 
-  final String username;
-  final String url;
-  final String imageUrl;
-  final int score;
-  final String status;
-  final int episodesSeen;
-  final int episodesTotal;
-  final DateTime date;
+  final String? username;
+  final String? url;
+  final String? imageUrl;
+  final int? score;
+  final String? status;
+  final int? episodesSeen;
+  final int? episodesTotal;
+  final DateTime? date;
 
   UserAnimeUpdate copyWith({
-    String username,
-    String url,
-    String imageUrl,
-    int score,
-    String status,
-    int episodesSeen,
-    int episodesTotal,
-    DateTime date,
+    String? username,
+    String? url,
+    String? imageUrl,
+    int? score,
+    String? status,
+    int? episodesSeen,
+    int? episodesTotal,
+    DateTime? date,
   }) =>
       UserAnimeUpdate(
         username: username ?? this.username,
@@ -44,7 +44,7 @@ class UserAnimeUpdate {
 
   factory UserAnimeUpdate.fromRawJson(String str) => UserAnimeUpdate.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory UserAnimeUpdate.fromJson(Map<String, dynamic> json) => UserAnimeUpdate(
         username: json["username"] == null ? null : json["username"],
@@ -65,6 +65,6 @@ class UserAnimeUpdate {
         "status": status == null ? null : status,
         "episodes_seen": episodesSeen == null ? null : episodesSeen,
         "episodes_total": episodesTotal == null ? null : episodesTotal,
-        "date": date == null ? null : date.toIso8601String(),
+        "date": date == null ? null : date!.toIso8601String(),
       };
 }

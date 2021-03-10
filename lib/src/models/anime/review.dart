@@ -10,16 +10,16 @@ class JikanAnimeReviews {
     this.reviews,
   });
 
-  final String requestHash;
-  final bool requestCached;
-  final int requestCacheExpiry;
-  final List<AnimeReview> reviews;
+  final String? requestHash;
+  final bool? requestCached;
+  final int? requestCacheExpiry;
+  final List<AnimeReview>? reviews;
 
   JikanAnimeReviews copyWith({
-    String requestHash,
-    bool requestCached,
-    int requestCacheExpiry,
-    List<AnimeReview> reviews,
+    String? requestHash,
+    bool? requestCached,
+    int? requestCacheExpiry,
+    List<AnimeReview>? reviews,
   }) =>
       JikanAnimeReviews(
         requestHash: requestHash ?? this.requestHash,
@@ -30,7 +30,7 @@ class JikanAnimeReviews {
 
   static JikanAnimeReviews fromRawJson(String str) => JikanAnimeReviews.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory JikanAnimeReviews.fromJson(Map<String, dynamic> json) => JikanAnimeReviews(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],
@@ -43,7 +43,7 @@ class JikanAnimeReviews {
         "request_hash": requestHash == null ? null : requestHash,
         "request_cached": requestCached == null ? null : requestCached,
         "request_cache_expiry": requestCacheExpiry == null ? null : requestCacheExpiry,
-        "reviews": reviews == null ? null : List<dynamic>.from(reviews.map((x) => x.toJson())),
+        "reviews": reviews == null ? null : List<dynamic>.from(reviews!.map((x) => x.toJson())),
       };
 }
 
@@ -58,22 +58,22 @@ class AnimeReview {
     this.content,
   });
 
-  final int malId;
-  final String url;
+  final int? malId;
+  final String? url;
   final dynamic type;
-  final int helpfulCount;
-  final DateTime date;
-  final AnimeReviewer reviewer;
-  final String content;
+  final int? helpfulCount;
+  final DateTime? date;
+  final AnimeReviewer? reviewer;
+  final String? content;
 
   AnimeReview copyWith({
-    int malId,
-    String url,
+    int? malId,
+    String? url,
     dynamic type,
-    int helpfulCount,
-    DateTime date,
-    AnimeReviewer reviewer,
-    String content,
+    int? helpfulCount,
+    DateTime? date,
+    AnimeReviewer? reviewer,
+    String? content,
   }) =>
       AnimeReview(
         malId: malId ?? this.malId,
@@ -87,7 +87,7 @@ class AnimeReview {
 
   factory AnimeReview.fromRawJson(String str) => AnimeReview.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory AnimeReview.fromJson(Map<String, dynamic> json) => AnimeReview(
         malId: json["mal_id"] == null ? null : json["mal_id"],
@@ -104,8 +104,8 @@ class AnimeReview {
         "url": url == null ? null : url,
         "type": type,
         "helpful_count": helpfulCount == null ? null : helpfulCount,
-        "date": date == null ? null : date.toIso8601String(),
-        "reviewer": reviewer == null ? null : reviewer.toJson(),
+        "date": date == null ? null : date!.toIso8601String(),
+        "reviewer": reviewer == null ? null : reviewer!.toJson(),
         "content": content == null ? null : content,
       };
 }

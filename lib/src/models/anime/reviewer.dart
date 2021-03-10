@@ -11,18 +11,18 @@ class AnimeReviewer {
     this.scores,
   });
 
-  final String url;
-  final String imageUrl;
-  final String username;
-  final int episodesSeen;
-  final AnimeReviewScore scores;
+  final String? url;
+  final String? imageUrl;
+  final String? username;
+  final int? episodesSeen;
+  final AnimeReviewScore? scores;
 
   AnimeReviewer copyWith({
-    String url,
-    String imageUrl,
-    String username,
-    int episodesSeen,
-    AnimeReviewScore scores,
+    String? url,
+    String? imageUrl,
+    String? username,
+    int? episodesSeen,
+    AnimeReviewScore? scores,
   }) =>
       AnimeReviewer(
         url: url ?? this.url,
@@ -34,7 +34,7 @@ class AnimeReviewer {
 
   factory AnimeReviewer.fromRawJson(String str) => AnimeReviewer.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory AnimeReviewer.fromJson(Map<String, dynamic> json) => AnimeReviewer(
         url: json["url"] == null ? null : json["url"],
@@ -49,6 +49,6 @@ class AnimeReviewer {
         "image_url": imageUrl == null ? null : imageUrl,
         "username": username == null ? null : username,
         "episodes_seen": episodesSeen == null ? null : episodesSeen,
-        "scores": scores == null ? null : scores.toJson(),
+        "scores": scores == null ? null : scores!.toJson(),
       };
 }

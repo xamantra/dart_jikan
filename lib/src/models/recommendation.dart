@@ -10,20 +10,20 @@ class Recommendation {
     this.recommendationCount,
   });
 
-  final int malId;
-  final String url;
-  final String imageUrl;
-  final String recommendationUrl;
-  final String title;
-  final int recommendationCount;
+  final int? malId;
+  final String? url;
+  final String? imageUrl;
+  final String? recommendationUrl;
+  final String? title;
+  final int? recommendationCount;
 
   Recommendation copyWith({
-    int malId,
-    String url,
-    String imageUrl,
-    String recommendationUrl,
-    String title,
-    int recommendationCount,
+    int? malId,
+    String? url,
+    String? imageUrl,
+    String? recommendationUrl,
+    String? title,
+    int? recommendationCount,
   }) =>
       Recommendation(
         malId: malId ?? this.malId,
@@ -36,7 +36,7 @@ class Recommendation {
 
   factory Recommendation.fromRawJson(String str) => Recommendation.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory Recommendation.fromJson(Map<String, dynamic> json) => Recommendation(
         malId: json["mal_id"] == null ? null : json["mal_id"],

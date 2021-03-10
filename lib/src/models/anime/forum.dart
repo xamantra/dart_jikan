@@ -10,16 +10,16 @@ class JikanAnimeForum {
     this.topics,
   });
 
-  final String requestHash;
-  final bool requestCached;
-  final int requestCacheExpiry;
-  final List<ForumTopic> topics;
+  final String? requestHash;
+  final bool? requestCached;
+  final int? requestCacheExpiry;
+  final List<ForumTopic>? topics;
 
   JikanAnimeForum copyWith({
-    String requestHash,
-    bool requestCached,
-    int requestCacheExpiry,
-    List<ForumTopic> topics,
+    String? requestHash,
+    bool? requestCached,
+    int? requestCacheExpiry,
+    List<ForumTopic>? topics,
   }) =>
       JikanAnimeForum(
         requestHash: requestHash ?? this.requestHash,
@@ -30,7 +30,7 @@ class JikanAnimeForum {
 
   static JikanAnimeForum fromRawJson(String str) => JikanAnimeForum.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  String? toRawJson() => json.encode(toJson());
 
   factory JikanAnimeForum.fromJson(Map<String, dynamic> json) => JikanAnimeForum(
         requestHash: json["request_hash"] == null ? null : json["request_hash"],
@@ -43,6 +43,6 @@ class JikanAnimeForum {
         "request_hash": requestHash == null ? null : requestHash,
         "request_cached": requestCached == null ? null : requestCached,
         "request_cache_expiry": requestCacheExpiry == null ? null : requestCacheExpiry,
-        "topics": topics == null ? null : List<dynamic>.from(topics.map((x) => x.toJson())),
+        "topics": topics == null ? null : List<dynamic>.from(topics!.map((x) => x.toJson())),
       };
 }

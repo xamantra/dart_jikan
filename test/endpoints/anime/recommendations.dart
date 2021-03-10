@@ -8,7 +8,7 @@ Future<void> recommendations() async {
   var result2 = await limit(jikan.getAnimeRecommendations(animeId: 999999));
 
   test('should return one piece recommendations', () async {
-    expect(result1.response.recommendations.any((x) => x.malId == 6702), true);
+    expect(result1.response!.recommendations!.any((x) => x.malId == 6702), true);
     expect(result1.hasData, true);
   });
 
