@@ -1,3 +1,8 @@
+## 0.4.0
+
+- Null-safety migration.
+- In development. Usable but not documented yet.
+
 ## 0.2.1
 
 - Covered all [`Anime`](https://jikan.docs.apiary.io/#reference/0/anime) endpoints.
