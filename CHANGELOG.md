@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Prevent the `type 'String' is not a subtype of type 'int?'` error with status code. [Issue #1](https://github.com/xamantra/dart_jikan/issues/1)
+
 ## 0.4.0
 
 - Null-safety migration.
